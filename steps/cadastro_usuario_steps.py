@@ -1,5 +1,4 @@
-from behave                 import *
-from pages import cadastro_usuario
+from behave                 import given,when,then
 from pages.cadastro_usuario import CadastroUsuario
 
 
