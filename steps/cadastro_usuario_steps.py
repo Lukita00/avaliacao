@@ -1,13 +1,6 @@
 from behave                 import given,when,then
 from pages.cadastro_usuario import CadastroUsuario
 
-
-dados = {
-    "nome":"teste de teste",
-    "email":"teste@email.com",
-    "senha":"12345678"
-}
-
 cadastro = CadastroUsuario()
 
 @given(u'que acesso a página de cadastro')
