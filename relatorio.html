@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="relatorio/style.css" type="text/css">
+        <title>Relatório de Testes</title>
+    </head>
+    <body>
+        <div>
+            <h1>Relatório de Testes</h1>
+        </div>
+        <div>
+            <p>
+                Está automação de teste foi desenvolvida em Python utilizando a biblioteca <a href="https://pypi.org/project/selenium/">Selenium</a> e o framework <a href="https://pypi.org/project/behave/">Behave</a>.
+            </p> 
+        </div>
+        <div>
+            <h2>Configuração do Ambiente</h2>
+        </div>
+        <div>
+            <p>
+                Os teste foram realizados em um ambiente Windows com Python na versão <a href="https://www.python.org/ftp/python/3.9.5/python-3.9.5-amd64.exe">3.9.5</a>,
+                o navegador utilizado foi o Microsoft Edge, seu <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">webdriver</a> dever ser colocado na pasta:
+                <br><code>C:\Users\'nome_usuario'\AppData\Local\Programs\Python\Python39</code> 
+                <br>Lembrando de renomear o arquivo para "MicrosoftWebDriver.exe" caso seja necessário.
+            </p>
+            <p>
+                As bibliotecas do Python podem ser instaladas utilizando o arquivo requirements.txt prensente na raiz do projeto, basta executar o comando abaixo.
+                <br><code>> pip install -r requirements.txt</code><br>
+                Após essa etapa o ambiente já está preparado para executar os teste, para isso basta executar o comando abaixo.
+                <br><code>> behave</code><br>
+            </p>
+        </div>
+        <div>
+            <h2>Cenários de Teste</h2>
+        </div>
+        <div>
+            <h3>Funcionalidade</h3>
+            <p>
+                Realizar cadastro de usuário para gerenciar seus dados.
+            </p>
+        </div>
+        <div>
+            <h3>Contexto</h3>
+            <p>
+                Todos os teste são executados sob o contexto que o usuário acessou a tela de <b>Cadastro de Usuários</b> para efetuar um cadastro.
+            </p>
+        </div>
+        <div>
+            <h3>Cenário: Realizar cadastro</h3>
+            <p>
+                Dado que preencho o formulário com nome = lucas araujo, email = lucas@teste.com.br e senha = 12345678<br>
+                Quando clico no botão cadastrar<br>
+                Então visualizo os dados cadastrados<br>
+            </p>
+            <img src="relatorio/images/Realizar cadastro.png" width="600">
+        </div>
+        <div>
+            <h3>Cenário: Realizar cadastro com nome inválido</h3>
+            <p>
+                Dado que preencho o formulário com nome = sarah, email = sarah@teste.com.br e senha = 1020304050<br>
+                Quando clico no botão cadastrar<br>
+                Então visualizo o campo nome<br>
+            </p>
+            <img src="relatorio/images/Realizar cadastro com nome inválido.png" width="600">
+        </div>
+        <div>
+            <h3>Cenário: Realizar cadastro com email inválido</h3>
+            <p>
+                Dado que preencho o formulário com nome = Mateus Azevedo, email = mateus.com.br e senha = biscoito<br>
+                Quando clico no botão cadastrar<br>
+                Então visualizo o campo email<br>
+            </p>
+            <img src="relatorio/images/Realizar cadastro com email inválido.png" width="600">
+        </div>
+        <div>
+            <h3>Cenário: Realizar cadastro com senha inválida</h3>
+            <p>
+                Dado que preencho o formulário com nome = João Carlos, email = joao@teste.com e senha = 1234<br>
+                Quando clico no botão cadastrar<br>
+                Então visualizo o campo senha<br>
+            </p>
+            <img src="relatorio/images/Realizar cadastro com senha inválida.png" width="600">
+        </div>
+        <div>
+            <h2>Resultado</h2>
+        </div>
+        <div>
+            <p>
+                O resultado apresentado ao final da execução dos testes.<br>
+                <code>
+                    1 feature passed, 0 failed, 0 skipped<br>
+                    4 scenarios passed, 0 failed, 0 skipped<br>
+                    16 steps passed, 0 failed, 0 skipped, 0 undefined<br>
+                </code>
+            </p>
+            <p>
+                Conforme o apresentado acima, temos:<br> 
+                1 funcionalidade aprovada e 0 reprovadas ou pulados.<br>
+                4 cenários aprovados e 0 reprovados ou pulados.<br>
+                16 etapas aprovadas e 0 reprovados, puladas e indefinidas.
+            </p>
+        </div>
+    </body>
+</html>
